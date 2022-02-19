@@ -24,6 +24,7 @@ Launch software by running the following line
 
     se-launch chassis-test
 
+This will automatically  open a web browser pointed to http://localhost:8888
 
 To edit configurations of tools (ip address) you can modify the
 stationexec/stations/chassis_test/tool_manifest.json file

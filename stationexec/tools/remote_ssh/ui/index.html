@@ -1,0 +1,43 @@
+<div>
+    <h1>Remote Ssh</h1>
+</div>
+<div>
+    <h2>Connection</h2>
+    Connection Status:<input id="{{tool_id}}_client_connected" type="text"><br>
+    <button id="connect">Connect</button><button id="disconnect">Disconnect</button>
+</div>
+<div>
+    LTR Specific Commands<br>
+    <button id="start_service">Start Service</button>
+    <button id="stop_service">Stop Service</button>
+    <button id="get_service">Service Status</button>
+    <hr>
+    Output Control:<br>
+    Fan DC: <input type=numeric class="set_fan" name="dc" min=0 max=100>
+    <button id="set_fan">Set Fan DC</button>
+    <br>
+    TTV DC: <input type=numeric class="set_ttv" name="dc" min=0 max=100>
+    <button id="set_ttv">Set TTV DC</button>
+
+</div>
+<div>
+    <h2>Test Connection</h2>
+    IP: <input type="text" class="test_connection" name="ip">
+    <button id="test_connection">Test Connection</button><br>
+    <input type="text" id="{{tool_id}}_test_connection_result">
+</div>
+<div>
+    <h2>Send Command</h2>
+    command: <input type="text" name="send_command" class="send_command">
+    <button id="send_command">Send</button>
+    <br>
+    STDOUT: <textarea id="{{tool_id}}_cmd_stdout" cols=40 rows=10></textarea>
+    <br>
+    STDERR: <textarea id="{{tool_id}}_cmd_stderr" cols=40 rows=10></textarea>
+</div>
+<div>
+    <h2>Transfer Files</h2>
+    Source:<br><input type="text" name="source" class="transfer_file"><br>
+    Dest:<br><input type="text" name="dest" class="transfer_file"><br>
+    <button id="transfer_file">Transfer</button>
+</div>

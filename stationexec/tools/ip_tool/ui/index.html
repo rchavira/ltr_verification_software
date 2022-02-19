@@ -1,0 +1,32 @@
+<div>
+    <h1>Ip Tool</h1>
+</div>
+<div>
+    <h2>Request an IP</h2>
+    <p>A serial number is required to register an IP address to ensure there are no duplicates.</p>
+    <br>Serial Number:
+    <input type="text" class="get_ip" name="sn">
+    <button id="get_ip">Get IP</button><br>
+    Registered IP:
+    <input type="text" id="get_ip_request" value="...">
+</div>
+<div>
+    <h2>Add IP Range</h2>
+    <p>Add a range of ip addresses to the available pool.</p>
+    Start:
+    <input type="text" class="add_ip_range" name="start"><br>
+    End:
+    <input type="text" class="add_ip_range" name="end"><br>
+    <button id="add_ip_range">Add Range</button>
+</div>
+<div>
+    <h2>Update DHCP Config</h2>
+    <p>An IP address is required to update the dhcpcp.conf file to set a static address for the target.</p>
+    IP:
+    <input type="text" class="update_dhcp_cfg" name="ip">
+    <button id="update_dhcp_cfg">Update DHCP</button>
+</div>
+<div>
+    <button id="read_ip_list">Read IP List</button><br>
+    <textarea id="ip_list" rows=20 cols=40></textarea>
+</div>

@@ -1,0 +1,77 @@
+<div>
+    <h1>Ltr Interconnect Board Modbus Interface</h1>
+</div>
+
+<div>
+    <button id="run_ttv">Run TTV</button>
+    <button id="stop_ttv">Stop TTV</button>
+    <input type=numeric name="value" class="set_power" min=0 max=500 step=1>
+    <button id="set_power">Set Power</button>
+</div>
+<hr>
+<div>
+    <button id="shutdown">System Shutdown</button>
+</div>
+<hr>
+<div>
+    <button id="READ">Read</button><br>
+    <table>
+        <tr><td valign=TOP>
+            <table>
+                <tr><th>Sensor</th><th>Value</th><th>Unit</th></tr>
+                <tr><td>t1_thermo</td><td><input id="{{tool_id}}_t1_thermo"></td><td>°C</td></tr>
+                <tr><td>t2_thermo</td><td><input id="{{tool_id}}_t2_thermo"></td><td>°C</td></tr>
+                <tr><td>t3_thermo</td><td><input id="{{tool_id}}_t3_thermo"></td><td>°C</td></tr>
+                <tr><td>t4_thermo</td><td><input id="{{tool_id}}_t4_thermo"></td><td>°C</td></tr>
+                <tr><td>t5_thermo</td><td><input id="{{tool_id}}_t5_thermo"></td><td>°C</td></tr>
+                <tr><td>t6_thermo</td><td><input id="{{tool_id}}_t6_thermo"></td><td>°C</td></tr>
+                <tr><td>t7_thermo</td><td><input id="{{tool_id}}_t7_thermo"></td><td>°C</td></tr>
+                <tr><td>t8_thermo</td><td><input id="{{tool_id}}_t8_thermo"></td><td>°C</td></tr>
+                <tr><td>t9_inlet_thermo_1</td><td><input id="{{tool_id}}_t9_inlet_thermo_1"></td><td>°C</td></tr>
+                <tr><td>t10_inlet_thermo_2</td><td><input id="{{tool_id}}_t10_inlet_thermo_2"></td><td>°C</td></tr>
+                <tr><td>i1_current_ttv_bus_1</td><td><input id="{{tool_id}}_i1_current_ttv_bus_1"></td><td>amps</td></tr>
+                <tr><td>i2_current_ttv_bus_2</td><td><input id="{{tool_id}}_i2_current_ttv_bus_2"></td><td>amps</td></tr>
+                <tr><td>i3_current_ttv_bus_3</td><td><input id="{{tool_id}}_i3_current_ttv_bus_3"></td><td>amps</td></tr>
+                <tr><td>i4_current_ttv_bus_4</td><td><input id="{{tool_id}}_i4_current_ttv_bus_4"></td><td>amps</td></tr>
+                <tr><td>v1_current_ttv_bus_1</td><td><input id="{{tool_id}}_v1_current_ttv_bus_1"></td><td>volts</td></tr>
+                <tr><td>v2_current_ttv_bus_2</td><td><input id="{{tool_id}}_v2_current_ttv_bus_2"></td><td>volts</td></tr>
+                <tr><td>v3_current_ttv_bus_3</td><td><input id="{{tool_id}}_v3_current_ttv_bus_3"></td><td>volts</td></tr>
+                <tr><td>v4_current_ttv_bus_4</td><td><input id="{{tool_id}}_v4_current_ttv_bus_4"></td><td>volts</td></tr>
+                <tr><td>t11_outlet_temp_1</td><td><input id="{{tool_id}}_t11_outlet_temp_1"></td><td>°C</td></tr>
+                <tr><td>t12_outlet_temp_2</td><td><input id="{{tool_id}}_t12_outlet_temp_2"></td><td>°C</td></tr>
+                <tr><td>a1_external_pot_1</td><td><input id="{{tool_id}}_a1_external_pot_1"></td><td>raw</td></tr>
+                <tr><td>a2_leak_sensor</td><td><input id="{{tool_id}}_a2_leak_sensor"></td><td>raw</td></tr>
+                <tr><td>t13_outlet_temp_3</td><td><input id="{{tool_id}}_t13_outlet_temp_3"></td><td>°C</td></tr>
+                <tr><td>t14_outlet_temp_4</td><td><input id="{{tool_id}}_t14_outlet_temp_4"></td><td>°C</td></tr>
+                <tr><td>i5_system_current</td><td><input id="{{tool_id}}_i5_system_current"></td><td>amps</td></tr>
+                <tr><td>d1_toggle_switch</td><td><input id="{{tool_id}}_d1_toggle_switch"></td><td>raw</td></tr>
+                <tr><td>d2_external_leak</td><td><input id="{{tool_id}}_d2_external_leak"></td><td>raw</td></tr>
+                <tr><td>f1_rpm_fan1</td><td><input id="{{tool_id}}_f1_rpm_fan1"></td><td>RPM</td></tr>
+                <tr><td>f2_rpm_fan2</td><td><input id="{{tool_id}}_f2_rpm_fan2"></td><td>RPM</td></tr>
+                <tr><td>f3_rpm_fan3</td><td><input id="{{tool_id}}_f3_rpm_fan3"></td><td>RPM</td></tr>
+                <tr><td>f4_rpm_fan4</td><td><input id="{{tool_id}}_f4_rpm_fan4"></td><td>RPM</td></tr>
+                <tr><td>f5_rpm_fan5</td><td><input id="{{tool_id}}_f5_rpm_fan5"></td><td>RPM</td></tr>
+                <tr><td>f6_rpm_fan6</td><td><input id="{{tool_id}}_f6_rpm_fan6"></td><td>RPM</td></tr>
+                <tr><td>f7_rpm_fan7</td><td><input id="{{tool_id}}_f7_rpm_fan7"></td><td>RPM</td></tr>
+                <tr><td>f8_rpm_fan8</td><td><input id="{{tool_id}}_f8_rpm_fan8"></td><td>RPM</td></tr>
+                <tr><td>f8_rpm_fan8</td><td><input id="{{tool_id}}_fT_fanboard_temperature"></td><td>°C</td></tr>
+            </table></td>
+        <td valign=TOP>
+            <table>
+                <tr><th>System Register</th><th>Value</th></tr>
+                <tr><td>s1_running_ttv</td><td><input id="{{tool_id}}_s1_running_ttv"></td></tr>
+                <tr><td>s2_system_stop</td><td><input id="{{tool_id}}_s2_system_stop"></td></tr>
+                <tr><td>s3_leak_detected</td><td><input id="{{tool_id}}_s3_leak_detected"></td></tr>
+                <tr><td>s4_thermal_fault</td><td><input id="{{tool_id}}_s4_thermal_fault"></td></tr>
+                <tr><td>s5_sensor_fault</td><td><input id="{{tool_id}}_s5_sensor_fault"></td></tr>
+                <tr><td>s6_duty_cycle_ttv_bus1</td><td><input id="{{tool_id}}_s6_duty_cycle_ttv_bus1"></td></tr>
+                <tr><td>s7_duty_cycle_ttv_bus2</td><td><input id="{{tool_id}}_s7_duty_cycle_ttv_bus2"></td></tr>
+                <tr><td>s8_duty_cycle_ttv_bus3</td><td><input id="{{tool_id}}_s8_duty_cycle_ttv_bus3"></td></tr>
+                <tr><td>s9_duty_cycle_ttv_bus4</td><td><input id="{{tool_id}}_s9_duty_cycle_ttv_bus4"></td></tr>
+                <tr><td>s10_duty_cycle_fan_bus1</td><td><input id="{{tool_id}}_s10_duty_cycle_fan_bus1"></td></tr>
+                <tr><td>s11_duty_cycle_fan_bus2</td><td><input id="{{tool_id}}_s11_duty_cycle_fan_bus2"></td></tr>
+            </table>
+        </td>
+    </tr>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+[
+    {
+        "opeartion": "CheckSN",
+        "description": "Checks that a Serial number was logged" 
+    },
+    {
+        "operation": "PowerTest",
+        "description": "Turns on the chassis to 200W per channel",
+        "follows": ["CheckSN"]
+    }
+]

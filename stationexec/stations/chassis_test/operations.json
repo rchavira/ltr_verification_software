@@ -1,11 +1,66 @@
 [
     {
-        "opeartion": "CheckSN",
-        "description": "Checks that a Serial number was logged" 
+        "operation": "CheckSN",
+        "description": "Checks that a Serial number was logged",
+        "results": [
+            { "id": "sn"},
+            { "id": "sn_OK"}
+        ]
+    },
+    {
+        "operation": "SystemUpdate",
+        "description": "Updates software on raspi image",
+        "results": [
+            { "id": "update_result"}
+        ],
+        "follows": ["CheckSN"]
+    },
+    {
+        "operation": "SystemTest",
+        "description": "Check system flags",
+        "results": [
+            { "id": "version"},
+            { "id": "s1_running_ttv"},
+            { "id": "s2_system_stop", "condition": "== 0"},
+            { "id": "s3_leak_detected", "condition": "== 0"},
+            { "id": "s4_thermal_fault", "condition": "== 0"},
+            { "id": "s5_sensor_fault", "condition": "== 0"}
+        ],
+        "follows": ["SystemUpdate"]
+    },
+    {
+        "operation": "SensorsTest",
+        "description": "Checks that the sensors are functioning",
+        "parameters": {
+            "tlist": ["t1_thermo", "t2_thermo","t3_thermo","t4_thermo"],
+            "trange": [12, 30]
+        },
+        "results": [
+            {"id": "test_result", "type": "boolean", "condition": "== True"}
+        ],
+        "follows": ["SystemTest"]
     },
     {
         "operation": "PowerTest",
-        "description": "Turns on the chassis to 200W per channel",
-        "follows": ["CheckSN"]
+        "description": "Perform low power test",
+        "parameters": {
+            "power_target": 800,
+            "run_time": 60,
+            "tlist": ["t1_thermo", "t2_thermo","t3_thermo","t4_thermo"],
+            "tmax": 50
+        },
+        "results": [
+            {"id": "temp"}
+        ],
+        "follows": ["SensorsTest"]
+    },
+    {
+        "operation": "Provision",
+        "description": "Update IP address to a new one from the available pool",
+        "results":[
+            { "id": "ip"},
+            { "id": "provision_result", "type": "boolean", "condition":"== True"}
+        ],
+        "follows": ["PowerTest"]
     }
 ]

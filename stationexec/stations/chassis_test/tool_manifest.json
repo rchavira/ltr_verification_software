@@ -118,5 +118,15 @@
             "username" : "pi",
             "password" : "raspberry"
         }
+    },
+    {
+        "tool_type": "ip_tool",
+        "name": "IP tracking",
+        "tool_id": "ip_tool",
+        "configurations": {
+            "iplist_location": "c:\\stationexec\\tools\\ip_tool\\iplist.json",
+            "dhcp_conf_location": "c:\\stationexec\\tools\\ip_tool\\dhcpcd.conf",
+            "dhcp_template_location": "c:\\stationexec\\tools\\ip_tool\\dhcpcd.template"
+        }
     }
 ]

@@ -7,6 +7,10 @@ You can download and install the whl package from here
 https://github.com/rchavira/stationexec
 
 ## software installation
+
+This requires pymodbus library to run.
+    pip install pymodbus
+
 Copy the contents of /stations and /tools to their respective folders in your stationexec installation.
 
 you can check to make sure that you have coppied the files correctly by running...

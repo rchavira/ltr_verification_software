@@ -10,6 +10,11 @@
     {
         "operation": "SystemUpdate",
         "description": "Updates software on raspi image",
+        "parameters": {
+            "remote_location": "/home/pi/ltr_interface",
+            "package" : "/home/pi/Downloads/ltr_interface.zip",
+            "sn": "CheckSN::sn"
+        },
         "results": [
             { "id": "update_result"}
         ],

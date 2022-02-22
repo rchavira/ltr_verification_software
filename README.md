@@ -8,8 +8,8 @@ https://github.com/rchavira/stationexec
 
 ## software installation
 
-This requires pymodbus library to run.
-    pip install pymodbus
+This requires pymodbus and paramiko libraries to run.
+    pip install pymodbus paramiko
 
 Copy the contents of /stations and /tools to their respective folders in your stationexec installation.
 

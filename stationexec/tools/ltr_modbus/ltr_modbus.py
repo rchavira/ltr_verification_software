@@ -30,6 +30,8 @@ default_configurations = {
         "s3_leak_detected": 2,
         "s4_thermal_fault": 3,
         "s5_sensor_fault": 4,
+        "current_power_target": 5,
+        "run_time": 6,
         "s6_duty_cycle_ttv_bus1": 10,
         "s7_duty_cycle_ttv_bus2": 11,
         "s8_duty_cycle_ttv_bus3": 12,
@@ -126,7 +128,7 @@ class LtrModbus(Tool):
         self.control_registers = kwargs["control_registers"]
         self.system_registers = kwargs["system_registers"]
         self.sensor_registers = kwargs["sensor_registers"]
-        self.emulation_registers = kwargs["emulation_registers"]
+        # self.emulation_registers = kwargs["emulation_registers"]
 
         self.system_monitoring = {}
         self.sensors = {}

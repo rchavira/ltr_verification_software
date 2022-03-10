@@ -1,0 +1,6 @@
+[
+    {
+        "operation": "PowerTest",
+        "description": "Turns on the chassis to 100W per channel"
+    }
+]
